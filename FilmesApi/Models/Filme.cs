@@ -8,6 +8,8 @@ namespace FilmesApi.Models
 {
     public class Filme
     {
+        public int Id { get; internal set; }
+
         [Required(ErrorMessage = "O campo titulo é obrigatorio")]
         public string Titulo { get; set; }
         [Required(ErrorMessage = "O campo diretor é obrigatorio")]
@@ -16,6 +18,6 @@ namespace FilmesApi.Models
         public string Genero { get; set; }
         [Range(1,600 , ErrorMessage = "O filme deve ter entre 1 a 600 min")]
         public int Duracao { get; set; }
-
+        
     }
 }
